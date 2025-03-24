@@ -19,11 +19,11 @@ kmh = 30
 Auto1.kiihdytä(kmh)
 print(f"Auton rekisteri: {Auto1.rekisteri}, huippunopeus {Auto1.huippunopeus}, nopeus {Auto1.nopeus}km/h ja kuljettu matka {Auto1.kuljettumatka}")
 time.sleep(1)
-kmh = kmh + 100
+kmh = kmh + 70
 Auto1.kiihdytä(kmh)
 print(f"Auton rekisteri: {Auto1.rekisteri}, huippunopeus {Auto1.huippunopeus}, nopeus {Auto1.nopeus}km/h ja kuljettu matka {Auto1.kuljettumatka}")
 time.sleep(1)
-kmh = kmh + 40
+kmh = kmh + 50
 Auto1.kiihdytä(kmh)
 print(f"Auton rekisteri: {Auto1.rekisteri}, huippunopeus {Auto1.huippunopeus}, nopeus {Auto1.nopeus}km/h ja kuljettu matka {Auto1.kuljettumatka}")
 time.sleep(1)
