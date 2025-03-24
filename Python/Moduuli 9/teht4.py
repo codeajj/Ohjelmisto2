@@ -1,11 +1,11 @@
 import random
 class Auto:
 
-    def __init__(self, rekisteri, huippunopeus, nopeus, kuljettumatka):
+    def __init__(self, rekisteri, huippunopeus):
         self.rekisteri = rekisteri
         self.huippunopeus = huippunopeus
-        self.kuljettumatka = kuljettumatka
-        self.nopeus = nopeus
+        self.kuljettumatka = 0
+        self.nopeus = 0
 
     def kiihdytä(self, kmh):
             self.nopeus = self.nopeus + kmh
@@ -23,7 +23,7 @@ Autot = []
 
 for i in range(10):
     huippunopeus = random.randint(100, 200)
-    Autot.append(Auto(f"ABC {i + 1}", huippunopeus, 0, 0))
+    Autot.append(Auto(f"ABC {i + 1}", huippunopeus))
 
 kisa = True
 while kisa:
