@@ -12,10 +12,12 @@ class Hissi:
 
     def kerrosYlös(self):
         if self.nyky_kerros < self.kerros_ylin:
+            print(f"Liikutaan ylös...")
             self.nyky_kerros = self.nyky_kerros + 1
 
     def kerrosAlas(self):
         if self.nyky_kerros > self.kerros_alin:
+            print(f"Liikutaan alas...")
             self.nyky_kerros = self.nyky_kerros - 1
 
 
