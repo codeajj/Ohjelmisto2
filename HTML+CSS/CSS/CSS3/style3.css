@@ -1,0 +1,43 @@
+html {
+    color: white;
+    background-color: #14171a;
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+}
+
+header {
+    display: flex;
+}
+
+h1 {
+    background-color: #1c2124;
+    width: 50%;
+}
+
+nav {
+    width: 50%;
+}
+/* kommentti */
+ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    background-color: #1c2124;
+}
+
+li a {
+    background-color: darkblue;
+    color: floralwhite;
+    width: 10rem;
+    height: 3rem;
+    display: block;
+    text-align: center;
+    line-height: 3rem;
+}
+
+li a:hover {
+    background-color: indianred;
+}

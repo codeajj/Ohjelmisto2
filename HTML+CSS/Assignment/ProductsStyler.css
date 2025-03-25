@@ -1,0 +1,147 @@
+html {
+    background-color: #14171a;
+    font-family: Verdana sans-serif;
+    color: floralwhite;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    position: sticky;
+}
+
+
+body {
+    margin: 0;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    background-color: #14171a;
+    padding: 0;
+    margin: 0;
+
+    img {
+        border-radius: 8px 8px 8px 8px;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+li {
+    width: calc(100% / 3);
+}
+
+li a {
+    color: floralwhite;
+    width: 100%;
+    display: block;
+    text-align: center;
+    line-height: 3rem;
+    text-decoration: none;
+    border-radius: 8px 8px 8px 8px;
+}
+
+li a:hover {
+    background-color: indianred;
+}
+
+main {
+    background-color: #242a2e;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+section h2 {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+
+    img {
+        border-radius: 8px 8px 8px 8px;
+        width: 300px;
+        height: 300px;
+    }
+}
+
+article {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+figure {
+    float: left;
+    margin: 0 1rem 1rem 0;
+    border: 1px black solid;
+    border-radius: 8px;
+}
+
+figcaption {
+    padding: 1rem;
+}
+
+img {
+    border-radius: 8px 8px 8px 8px;
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #14171a;
+    padding: 1rem;
+    text-align: center;
+}
+
+form {
+    background-color: floralwhite;
+    width: 80%;
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 8px 8px 8px 8px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+}
+
+@media screen and (min-width: 769px) {
+    .conatiner {
+        width: 80%;
+    }
+
+    section {
+        width: 80%;
+    }
+
+    aside {
+        width: 20%;
+    }
+
+    article {
+        width: calc(100% / 3);
+    }
+
+    li {
+        width: 10rem;
+    }
+
+    form {
+        width: 40%;
+    }
+}

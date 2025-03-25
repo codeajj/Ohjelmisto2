@@ -1,0 +1,29 @@
+p {
+    color: red;
+}
+
+#id-example {
+    color: saddlebrown;
+}
+.class-example {
+    color: blue;
+}
+li>a {
+    color: darkgreen;
+}
+
+li>a:link,
+li>a:visited {
+    color: rebeccapurple;
+    font-weight: bold;
+}
+li>a:hover {
+    color: hotpink;
+}
+
+.box:after {
+    content: "→";
+}
+html {
+    background-color: #14171a ;
+}

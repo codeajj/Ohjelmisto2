@@ -1,0 +1,30 @@
+html {
+    background-color: #14171a;
+    font-family: Verdana sans-serif;
+}
+.container {
+    width: 40rem;
+    margin: auto;
+}
+
+header {
+    background-color: pink;
+}
+
+li a {
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: black;
+}
+li a:hover::after {
+    content: "#";
+}
+
+main {
+    color: white;
+}
+footer {
+    background-color: lightblue;
+}
