@@ -1,8 +1,4 @@
 import random
-
-from geopy.distance import lonlat
-
-
 class Auto:
 
     def __init__(self, rekisteri, huippunopeus):
@@ -25,41 +21,23 @@ class Auto:
 
 
 class Kilpailu:
-    autolista = []
 
     def __init__(self):
         self.kilpailu_nimi = "Suuri Romuralli"
         self.pituus = 8000
+        self.Autot = []
 
-        self.autolista = []
         for i in range(10):
-            auto.huippunopeus = random.randint(100, 200)
-            self.autolista.append(Auto(f"ABC {i + 1}", auto.huippunopeus))
+            huippunopeus = random.randint(100, 200)
+            self.Autot.append(Auto(f"ABC {i + 1}", huippunopeus))
 
     def tunti_kului(self):
-        auto.kiihdytä(random.randint(-10, 15))
-        auto.kuljettu(1)
+        for auto in self.Autot:
+            auto.kiihdytä(random.randint(-10, 15))
+            auto.kuljettu(1)
 
-    def tilanne(self):
-        for Auto.auto in self.autolista:
-            Kilpailu.autolista.sort(key=lambda a: a.kuljettumatka, reverse=True)
-            print(f"Rekisteri: {auto.rekisteri}, huippunopeus: {auto.huippunopeus}km/h, nopeus: {auto.nopeus}km/h, kulkenut: {auto.kuljettumatka}km")
+    def kisa_tilanne(self):
+        self.Autot.sort(key=lambda a: a.kuljettumatka, reverse=True)
+        print(f"Rekisteri: {Auto.rekisteri}, huippunopeus: {Auto.huippunopeus}km/h, nopeus: {Auto.nopeus}km/h, kulkenut: {Auto.kuljettumatka}km")
 
-    def kilpailu_ohi(self):
-        if auto.kuljettumatka >= self.pituus:
-            Kisa_loppunut = True
-        else: Kisa_loppunut = False
-        return Kisa_loppunut
-
-
-Kisa_loppunut = False
-while not Kisa_loppunut:
-    for auto in Kilpailu.autolista:
-        Kilpailu.tunti_kului(auto)
-        Kilpailu.tilanne(auto)
-        if auto.kuljettumatka >= 8000:
-            Kilpailu.kilpailu_ohi(auto)
-
-Kilpailu.autolista.sort(key=lambda a: a.kuljettumatka, reverse=True)
-for auto in Kilpailu.autolista:
-    print(f"Rekisteri: {auto.rekisteri}, huippunopeus: {auto.huippunopeus}km/h, nopeus: {auto.nopeus}km/h, kulkenut: {auto.kuljettumatka}km")
+Kilpailu.tunti_kului(Kilpailu())
