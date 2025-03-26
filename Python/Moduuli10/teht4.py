@@ -22,9 +22,9 @@ class Auto:
 
 class Kilpailu:
 
-    def __init__(self):
-        self.kilpailu_nimi = "Suuri Romuralli"
-        self.pituus = 8000
+    def __init__(self, kilpailun_nimi, pituus):
+        self.kilpailu_nimi = kilpailun_nimi
+        self.pituus = pituus
         self.Autot = []
 
         for i in range(10):
@@ -37,7 +37,22 @@ class Kilpailu:
             auto.kuljettu(1)
 
     def kisa_tilanne(self):
-        self.Autot.sort(key=lambda a: a.kuljettumatka, reverse=True)
-        print(f"Rekisteri: {Auto.rekisteri}, huippunopeus: {Auto.huippunopeus}km/h, nopeus: {Auto.nopeus}km/h, kulkenut: {Auto.kuljettumatka}km")
+        print(f"\n{'Rekisteri':<10} {'Huippunopeus':<15} {'Nopeus':<10} {'Kulkenut':<10}")
+        for auto in self.Autot:
+            self.Autot.sort(key=lambda a: a.kuljettumatka, reverse=True)
+            print(f"{auto.rekisteri:<10} {auto.huippunopeus:<15} {auto.nopeus:<10} {auto.kuljettumatka:<10}")
 
-Kilpailu.tunti_kului(Kilpailu())
+    def kilpailu_ohi(self):
+        return any(auto.kuljettumatka >= self.pituus for auto in self.Autot)
+
+kilpailu = Kilpailu("Suuri Romuralli", 8000)
+tunnit = 0
+while not kilpailu.kilpailu_ohi():
+    kilpailu.tunti_kului()
+    tunnit +=1
+    if tunnit % 10 == 0:
+        print(f"\nTunnin {tunnit} tilanne:")
+        kilpailu.kisa_tilanne()
+
+print("\nKilpailu päättyi!")
+kilpailu.kisa_tilanne()
