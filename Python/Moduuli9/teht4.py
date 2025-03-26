@@ -1,4 +1,6 @@
 import random
+
+
 class Auto:
 
     def __init__(self, rekisteri, huippunopeus):
@@ -8,16 +10,17 @@ class Auto:
         self.nopeus = 0
 
     def kiihdytä(self, kmh):
-            self.nopeus = self.nopeus + kmh
-            if self.nopeus < 0:
-                self.nopeus = 0
-            if self.nopeus > self.huippunopeus:
-                self.nopeus = self.huippunopeus
-            return
+        self.nopeus = self.nopeus + kmh
+        if self.nopeus < 0:
+            self.nopeus = 0
+        if self.nopeus > self.huippunopeus:
+            self.nopeus = self.huippunopeus
+        return
 
     def kuljettu(self, hours):
         self.kuljettumatka = self.kuljettumatka + (self.nopeus * hours)
         return
+
 
 Autot = []
 
@@ -33,6 +36,7 @@ while kisa:
         if auto.kuljettumatka >= 10000:
             kisa = False
 
-Autot.sort(key = lambda a: a.kuljettumatka, reverse = True)
+Autot.sort(key=lambda a: a.kuljettumatka, reverse=True)
 for auto in Autot:
-    print(f"Rekisteri: {auto.rekisteri}, huippunopeus: {auto.huippunopeus}km/h, nopeus: {auto.nopeus}km/h, kulkenut: {auto.kuljettumatka}km")
+    print(
+        f"Rekisteri: {auto.rekisteri}, huippunopeus: {auto.huippunopeus}km/h, nopeus: {auto.nopeus}km/h, kulkenut: {auto.kuljettumatka}km")
