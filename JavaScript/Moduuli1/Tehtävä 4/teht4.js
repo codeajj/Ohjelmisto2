@@ -1,20 +1,19 @@
-function getHouse() {
-  const minCeiled = Math.ceil(1);
-  const maxFloored = Math.floor(4);
-  return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
-}
+number = Math.floor(Math.random() * 4)
 
 const username = prompt("Enter your name: ");
 
-if (getHouse() === 1) {
-    console.log("Hey " + username + " your house is Slytherin");
+if (number === 0) {
+    document.querySelector('#target').innerHTML = ("Hey " + username + " your house is Slytherin");
 }
-else if (getHouse() === 2) {
-    console.log("Hey " + username + " your house is Hufflepuff");
+else if (number === 1) {
+    document.querySelector('#target').innerHTML = ("Hey " + username + " your house is Hufflepuff");
 }
-else if (getHouse() === 3) {
-    console.log("Hey " + username + " your house is Gryffindor");
+else if (number === 2) {
+    document.querySelector('#target').innerHTML = ("Hey " + username + " your house is Gryffindor");
 }
-else if (getHouse() === 4) {
-    console.log("Hey " + username + " your house is Ravenclaw");
+else if (number === 3) {
+    document.querySelector('#target').innerHTML = ("Hey " + username + " your house is Ravenclaw");
+}
+else {
+    document.querySelector('#target').innerHTML = 'VÄÄÄÄÄÄÄÄÄÄÄÄÄRIN!!!!!!!!!';
 }

@@ -3,33 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Testing JavaScript</title>
+    <script src="teht4.js" defer></script>
 </head>
 <body>
     <h1>Hello!</h1>
     <p id="target"></p>
-    <script>
-        "use strict";
-        function getHouse() {
-  const minCeiled = Math.ceil(1);
-  const maxFloored = Math.floor(4);
-  return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
-}
-
-const username = prompt("Enter your name: ");
-
-if (getHouse() === 1) {
-    document.querySelector('#target').innerHTML = ("Hey " + username + " your house is Slytherin");
-}
-else if (getHouse() === 2) {
-    document.querySelector('#target').innerHTML = ("Hey " + username + " your house is Hufflepuff");
-}
-else if (getHouse() === 3) {
-    document.querySelector('#target').innerHTML = ("Hey " + username + " your house is Gryffindor");
-}
-else if (getHouse() === 4) {
-    document.querySelector('#target').innerHTML = ("Hey " + username + " your house is Ravenclaw");
-}
-else document.querySelector('#target').innerHTML = ("Hey " + username + " you are a muggle");
-    </script>
 </body>
 </html>
