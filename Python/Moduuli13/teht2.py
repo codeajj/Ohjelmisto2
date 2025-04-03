@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, Response
 import mysql.connector
 import json
 
@@ -46,7 +46,7 @@ def kenttä(ICAO):
         "Municipality": kunta[0][0]
         }
     jsonvast = json.dumps(vastaus)
-    return jsonvast
+    return Response(jsonvast, mimetype='application/json')
 
 if __name__ == "__main__":
     app.run(use_reloader=True, host="0.0.0.0", port=5000)
