@@ -10,4 +10,5 @@ do {
 
 numerot.sort((a,b) => a-b);
 numerot.reverse();
-document.querySelector("#target").innerHTML = numerot
+console.log(numerot);
+document.querySelector("#target").innerHTML = "Vastaus konsolissa."

@@ -5,5 +5,6 @@ while(kerrat<5) {
 }
 
 for(let i=0; i<numerot.length; i++) {
-  document.querySelector("#target").innerHTML=(numerot[4]+", "+numerot[3]+", "+numerot[2]+", "+numerot[1]+", "+numerot[0]);
+  document.querySelector("#target").innerHTML= "Vastaus konsolissa."
+      console.log(numerot[4]+", "+numerot[3]+", "+numerot[2]+", "+numerot[1]+", "+numerot[0]);
 }

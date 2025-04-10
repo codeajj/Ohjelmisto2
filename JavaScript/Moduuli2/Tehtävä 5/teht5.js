@@ -11,4 +11,5 @@ while (onko === true) {
 }
 
 numerot.sort((a,b) => a-b);
-document.querySelector("#target").innerHTML = numerot
+console.log(numerot);
+document.querySelector("#target").innerHTML = "Vastaus konsolissa."
