@@ -6,4 +6,4 @@ for (let i = 6; i > 0; i--) {
 koirat.sort((a,b) => a-b);
 koirat.reverse();
 
-document.querySelector('#target').innerHTML = koirat
+document.querySelector('#target').innerHTML = koirat.join("\n")
