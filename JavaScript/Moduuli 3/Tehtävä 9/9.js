@@ -43,7 +43,7 @@ document.getElementById("start").addEventListener("click", function () {
             }
             break;
           default:
-            result = "Invalid operation.";
+            result = "Invalid calculation.";
         }
     }
   }
