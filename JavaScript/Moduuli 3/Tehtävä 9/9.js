@@ -1,22 +1,23 @@
 document.getElementById("start").addEventListener("click", function () {
-  let result;
   const input = document.getElementById("calculation").value;
 
-  let operator;
+  let result;
+  let calculate;
+
   if (input.includes("+")) {
-    operator = "+";
+    calculate = "+";
   } else if (input.includes("-")) {
-    operator = "-";
+    calculate = "-";
   } else if (input.includes("*")) {
-    operator = "*";
+    calculate = "*";
   } else if (input.includes("/")) {
-    operator = "/";
+    calculate = "/";
   }
-  if (!operator) {
+  if (!calculate) {
     result = "Error";
 
   } else {
-    const numbers = input.split(operator);
+    const numbers = input.split(calculate);
 
     if (numbers.length !== 2) {
       result = "Error";
@@ -24,7 +25,7 @@ document.getElementById("start").addEventListener("click", function () {
       const num1 = parseFloat(numbers[0]);
       const num2 = parseFloat(numbers[1]);
 
-      switch (operator) {
+      switch (calculate) {
         case "+":
           result = num1 + num2;
           break;
